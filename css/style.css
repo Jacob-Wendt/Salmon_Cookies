@@ -1,7 +1,13 @@
 table {
-text-align: center
+text-align: center;
+border-collapse: collapse;
 }
 table th {
 padding: 10px;
 border: 1px solid;
 }
+table td {
+padding: 10px;
+border: 1px solid;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
