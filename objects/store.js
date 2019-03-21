@@ -1,5 +1,22 @@
 var hours = ['6am','7am','8am','9am','10am','11am','12pm','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 
+//Event Listener
+var thisForm = document.getElementById("form").addEventListener("submit", handleForm);
+
+function handleForm(e) {
+e.preventDefault()
+
+var name = e.target.name.value;
+var min = e.target.min.value;
+var max = e.target.max.value;
+var avg = e.target.avg.value;
+var test = new Store(name, min, max, avg);
+test.renderRow();
+}
+
+
+
+
 //Constructor Function For Stores
 function Store( name, minCx, maxCx, avgCook ) {
 this.locationName = name,
@@ -68,3 +85,4 @@ airport.renderRow();
 seattle.renderRow();
 capitol.renderRow();
 alki.renderRow();
+
